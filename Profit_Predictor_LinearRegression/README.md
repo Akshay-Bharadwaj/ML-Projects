@@ -109,7 +109,7 @@ pickle.dump(model, open('profit_predictor.pkl', 'wb'))
 
 Later, reload it for deployment or predictions:
 ```python
-loaded_model = pickle.load(open('profit_predictor.pkl', 'rb'))
+pickle.load(open('profit_predictor.pkl', 'rb'))
 ```
 Pickle ensures the model can be reused without retraining, making deployment faster.
 
