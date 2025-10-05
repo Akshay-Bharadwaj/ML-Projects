@@ -94,10 +94,8 @@ test_score  = model.score(X_test, y_test)
 
 ### 7. Understanding CL and SL
 
-| Term | Full Form | Explanation | Relevance in This Project |
-|------|------------|--------------|----------------------------|
-| **SL**(*Significance Level*) -  How much uncertainty you’re willing to accept
-| **CL**(*Confidence Level*) - How sure you are that your result is correct
+**SL**(*Significance Level*) -  How much uncertainty you’re willing to accept
+**CL**(*Confidence Level*) - How sure you are that your result is correct
 
 CL = 1 - SL
 
