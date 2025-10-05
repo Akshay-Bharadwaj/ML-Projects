@@ -2,7 +2,7 @@
 
 ## 📘 Project Overview
 This project builds a **Linear Regression model** to predict a company’s **profit** based on its **spending patterns** (R&D, Administration, Marketing) and **geographical location (State)**.  
-It is an end-to-end **beginner-friendly ML project** covering **data preprocessing, feature encoding, model training, evaluation, and model persistence using Pickle**.
+It is an end-to-end **beginner-friendly ML project** covering **data preprocessing, feature encoding, model training, evaluation, and model deployment using Pickle**.
 
 ---
 
@@ -61,8 +61,8 @@ Separated:
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
-ohe = OneHotEncoder(sparse_output=False)
-state_dummy = ohe.fit_transform(data[['State']])
+oheState = OneHotEncoder(sparse_output=False)
+stateDummy = ohe.fit_transform(data.iloc[:, [3]])
 ```
 - One-Hot Encoding creates binary dummy columns for each category.  
 - Prevents giving a false ordinal relationship to categorical data.  
@@ -96,25 +96,22 @@ test_score  = model.score(X_test, y_test)
 
 | Term | Full Form | Explanation | Relevance in This Project |
 |------|------------|--------------|----------------------------|
-| **SL** | *Significance Level* | The probability of rejecting the null hypothesis when it is true (Type I error). Commonly set at 0.05 or 0.1. Lower SL = higher statistical confidence. | You used **SL = 0.1**, meaning you allow a 10% chance of error when assuming a variable is statistically significant. |
-| **CL** | *Confidence Level* | The percentage that shows how confident we are that the model or result is accurate. Calculated as `1 - SL`. | You set **CL = 0.9**, implying the model should achieve at least **90% confidence (accuracy)** before being accepted as reliable. |
+| **SL**(*Significance Level*) -  How much uncertainty you’re willing to accept
+| **CL**(*Confidence Level*) - How sure you are that your result is correct
 
-So your model selection logic:  
-> Only accept a model if `test_score >= CL (0.9)` and it performs better than `train_score`.
+CL = 1 - SL
 
 ---
 
 ### 8. Model Serialization with Pickle
 After training the final model:
 ```python
-with open('profit_predictor.pkl', 'wb') as file:
-    pickle.dump(model, file)
+pickle.dump(model, open('profit_predictor.pkl', 'wb'))
 ```
 
 Later, reload it for deployment or predictions:
 ```python
-with open('profit_predictor.pkl', 'rb') as file:
-    loaded_model = pickle.load(file)
+loaded_model = pickle.load(open('profit_predictor.pkl', 'rb'))
 ```
 Pickle ensures the model can be reused without retraining, making deployment faster.
 
@@ -129,22 +126,8 @@ Pickle ensures the model can be reused without retraining, making deployment fas
 ---
 
 ## 🚀 Future Improvements
-- Apply **Backward Elimination** for feature selection based on p-values and SL.  
-- Deploy model via **Flask** or **Streamlit** app.  
 - Visualize feature impact using **Seaborn regression plots** or **correlation heatmaps**.  
 - Add **user input UI** for real-time profit prediction.
-
----
-
-## 📂 Repository Structure
-```
-Profit_Predictor_LinearRegression/
-│
-├── 50_Startups.csv
-├── Profit_Predictor_LinearRegression.ipynb
-├── profit_predictor.pkl
-└── README.md
-```
 
 ---
 
@@ -157,8 +140,3 @@ Profit_Predictor_LinearRegression/
 - Model Serialization (Pickle)
 
 ---
-
-## 🧑‍💻 Author
-**Akshay Bharadwaj**  
-Master’s Student – Advanced Computer Science (Data Science & AI)  
-Newcastle University, UK
