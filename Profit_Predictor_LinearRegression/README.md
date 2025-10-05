@@ -62,7 +62,7 @@ Separated:
 ```python
 from sklearn.preprocessing import OneHotEncoder
 oheState = OneHotEncoder(sparse_output=False)
-stateDummy = ohe.fit_transform(data.iloc[:, [3]])
+stateDummy = oheState.fit_transform(data.iloc[:, [3]])
 ```
 - One-Hot Encoding creates binary dummy columns for each category.  
 - Prevents giving a false ordinal relationship to categorical data.  
