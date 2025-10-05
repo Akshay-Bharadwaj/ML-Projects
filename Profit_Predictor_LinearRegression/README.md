@@ -138,3 +138,9 @@ Pickle ensures the model can be reused without retraining, making deployment fas
 - Model Serialization (Pickle)
 
 ---
+
+## 🪪 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
