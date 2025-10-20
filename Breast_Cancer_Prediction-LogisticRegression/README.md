@@ -173,3 +173,11 @@ This model can assist medical professionals in performing **early detection** of
 ## 🧑‍💻 Author
 
 **Akshay Bharadwaj**
+
+---
+
+## 🪪 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
