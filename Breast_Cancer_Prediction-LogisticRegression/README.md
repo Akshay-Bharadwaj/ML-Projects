@@ -25,7 +25,6 @@ The dataset contains **30 numerical features** describing cell nucleus measureme
 - concave_points_mean  
 - symmetry_mean  
 - fractal_dimension_mean  
-... and their standard errors (`_se`) and worst values (`_worst`).
 
 **Target Variable:**  
 `diagnosis`  
@@ -133,16 +132,7 @@ The model achieved near-perfect generalization performance.
 
 ---
 
-### 7. Understanding CL and SL
-
-| Term | Full Form | Explanation | Relevance in This Project |
-|------|------------|--------------|----------------------------|
-| **SL** | Significance Level | Probability of rejecting a true null hypothesis (Type I error). Usually 0.05 or 0.1. | Used to define acceptable error when determining model reliability. |
-| **CL** | Confidence Level | Represents model confidence = (1 - SL). | Here, CL = 0.9 ensures model test accuracy ≥ 90% is acceptable. |
-
----
-
-### 8. Conclusion
+### 7. Conclusion
 
 The trained Logistic Regression model successfully predicts whether a cell is **malignant** or **benign** with **99% accuracy**.  
 This model can assist medical professionals in performing **early detection** of breast cancer, helping to improve diagnosis efficiency and patient outcomes.
@@ -164,21 +154,10 @@ This model can assist medical professionals in performing **early detection** of
 - Implement feature scaling (StandardScaler) to optimize coefficients.  
 - Visualize confusion matrix and ROC curve.  
 - Compare performance with SVM, Decision Tree, or Random Forest models.  
-- Deploy model as an interactive web app using **Streamlit** or **Flask**.  
+- Deploy model as an interactive web api using **FastAPI**.  
 
 ---
 
-## 📂 Repository Structure
-
-```
-BreastCancer_Prediction_LogisticRegression/
-│
-├── bc_data.csv
-├── BreastCancer_Prediction_LogisticRegression.ipynb
-└── README.md
-```
-
----
 
 ## 🧩 Concepts Reinforced
 
