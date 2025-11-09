@@ -248,3 +248,17 @@ print(f"Model confidence: {prob * 100:.2f}%")
 
 The **KNN-based Heart Disease Prediction model** achieved an accuracy of **93%**, maintaining balanced precision-recall performance across both classes.  
 It demonstrates strong potential for clinical risk assessment and can be further optimized using hyperparameter tuning or ensemble approaches.
+
+---
+
+## 🧑‍💻 Author
+
+**Akshay Bharadwaj**
+
+---
+
+## 🪪 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
