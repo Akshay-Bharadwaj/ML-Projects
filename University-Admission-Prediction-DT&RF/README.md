@@ -106,6 +106,7 @@ pred_scaled = final_model.predict(user_input_scaled)[0]
 # ... code for inverse_transform ...
 
 print(f"Predicted Chance of Admission: {np.round(pred_scaled, 2) * 100}%")
+```
 
 ---
 
