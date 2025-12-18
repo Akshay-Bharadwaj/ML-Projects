@@ -97,7 +97,7 @@ if prediction[0] == 0:
     print('There is no chance of Tsunami')
 else:
     print('Tsunami may occur. Please take safety measures.')
-
+```
 ---
 
 ## ✅ Conclusion
