@@ -97,3 +97,23 @@ if prediction[0] == 0:
     print('There is no chance of Tsunami')
 else:
     print('Tsunami may occur. Please take safety measures.')
+
+---
+
+## ✅ Conclusion
+
+The Earthquake-Tsunami prediction model demonstrates that classification algorithms, particularly Random Forest, can accurately assess disaster risks. By addressing data imbalance with SMOTE and applying hyperparameter tuning to prevent overfitting, we developed a robust system capable of predicting tsunami occurrences with high precision. Both models achieved a balanced state, ensuring they are reliable for predicting outcomes on new, unknown seismic data.
+
+---
+
+## 🧑‍💻 Author
+
+**Akshay Bharadwaj**
+
+---
+
+## 🪪 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
